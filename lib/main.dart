@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               drawLogo(),
              drawSingIn(context),
-           //  drawButtom();
+             drawButtom(),
             ],)
 
           ],
