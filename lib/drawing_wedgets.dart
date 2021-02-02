@@ -20,20 +20,22 @@ Widget drawLogo() {
 }
 
 Widget drawButtom() {
-  return Row(mainAxisAlignment: MainAxisAlignment.center,
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       FlatButton(
           onPressed: () {},
           child: RichText(
             text: TextSpan(children: [
-              TextSpan(text: 'Dont have an account?',style: TextStyle(color: Colors.black)),
+              TextSpan(
+                  text: 'Dont have an account?',
+                  style: TextStyle(color: Colors.black)),
               TextSpan(
                   text: 'Sign Up',
                   style: TextStyle(color: Colors.lightBlueAccent))
             ]),
           ))
     ],
-
   );
 }
 
@@ -68,18 +70,17 @@ Widget drawSingIn(context) {
                   ),
                 ]),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                        labelText: 'Enter email',
-                        hintText: 'please enter your email',
-                        prefixIcon: Icon(
-                          Icons.email,
-                          color: Colors.lightBlueAccent,
-                        )),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.email,
+                      color: Colors.lightBlueAccent,
+                    ),
+                    labelText: 'Enter email',
+                    hintText: 'please enter your email',
                   ),
                 ),
               ),
@@ -151,19 +152,21 @@ Widget drawSingIn(context) {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(onTap:(){} ,
+                  child: GestureDetector(
+                    onTap: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                           // margin: EdgeInsets.only(bottom: 19),
-                            child: CircleAvatar(  radius: 100 ,
-                              backgroundColor: Colors.lightBlueAccent,
-                              child: Icon(
-                                FontAwesomeIcons.facebook,
-                                color: Colors.white,
-                              ),
-                            ))
+                            // margin: EdgeInsets.only(bottom: 19),
+                            child: CircleAvatar(
+                          radius: 100,
+                         // backgroundColor: Colors.lightBlueAccent,
+                          child: Icon(
+                            FontAwesomeIcons.facebook,
+                            color: Colors.white,
+                          ),
+                        ))
                       ],
                     ),
                   ),
