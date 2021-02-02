@@ -24,33 +24,35 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * .8,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(50),
-                    bottomRight:Radius.circular(50),
-
-                  )),
-            ),
-            Column(mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Stack(
               children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * .8,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.lightBlueAccent,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(50),
+                        bottomRight:Radius.circular(50),
 
-              drawLogo(),
-             drawSingIn(context),
-             drawButtom(),
-            ],)
+                      )),
+                ),
+                Column(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
 
-          ],
-        ),
+                  drawLogo(),
+                 drawSingIn(context),
+                 drawButtom(),
+                ],)
+
+              ],
+          ),
       ),
+
+
     );
   }
 }
